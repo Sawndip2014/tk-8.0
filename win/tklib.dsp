@@ -4,7 +4,7 @@
 
 # TARGTYPE "Win32 (x86) Static Library" 0x0104
 
-CFG=tklib - Win32 Debug
+CFG=tklib - Win32 Debug IPv6
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
@@ -13,12 +13,13 @@ CFG=tklib - Win32 Debug
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "tklib.mak" CFG="tklib - Win32 Debug"
+!MESSAGE NMAKE /f "tklib.mak" CFG="tklib - Win32 Debug IPv6"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
 !MESSAGE "tklib - Win32 Release" (based on "Win32 (x86) Static Library")
 !MESSAGE "tklib - Win32 Debug" (based on "Win32 (x86) Static Library")
+!MESSAGE "tklib - Win32 Debug IPv6" (based on "Win32 (x86) Static Library")
 !MESSAGE 
 
 # Begin Project
@@ -41,7 +42,7 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
 BSC32=bscmake.exe
@@ -64,7 +65,30 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Debug"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD BASE RSC /l 0x809
+# ADD RSC /l 0x809
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "tklib___Win32_Debug_IPv6"
+# PROP BASE Intermediate_Dir "tklib___Win32_Debug_IPv6"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "Debug_IPv6"
+# PROP Intermediate_Dir "Debug_IPv6"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /GB /W3 /Gm /GX /ZI /Od /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /I "\src\tk-8.0\xlib" /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
 BSC32=bscmake.exe
@@ -80,6 +104,7 @@ LIB32=link.exe -lib
 
 # Name "tklib - Win32 Release"
 # Name "tklib - Win32 Debug"
+# Name "tklib - Win32 Debug IPv6"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
@@ -204,6 +229,8 @@ SOURCE=..\generic\tkButton.c
 # ADD CPP /I "c:/src/tcl-8.0/win" /I "c:/src/tcl-8.0/generic" /I "c:/src/tk-8.0/win" /I "c:/src/tk-8.0/xlib" /I "c:/src/tk-8.0/bitmaps" /I "c:/src/tk-8.0/win/rc"
 
 !ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
 
 !ENDIF 
 
@@ -694,6 +721,17 @@ InputName=bgerror
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\bgerror.tcl
+InputName=bgerror
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -720,6 +758,17 @@ InputName=button
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\button.tcl
+InputName=button
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -752,6 +801,17 @@ InputName=clrpick
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\clrpick.tcl
+InputName=clrpick
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -778,6 +838,17 @@ InputName=comdlg
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\comdlg.tcl
+InputName=comdlg
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -810,6 +881,17 @@ InputName=console
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\console.tcl
+InputName=console
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -836,6 +918,17 @@ InputName=dialog
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\dialog.tcl
+InputName=dialog
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -868,6 +961,17 @@ InputName=entry
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\entry.tcl
+InputName=entry
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -894,6 +998,17 @@ InputName=focus
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\focus.tcl
+InputName=focus
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -926,6 +1041,17 @@ InputName=listbox
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\listbox.tcl
+InputName=listbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -952,6 +1078,17 @@ InputName=menu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\menu.tcl
+InputName=menu
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -984,6 +1121,17 @@ InputName=msgbox
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\msgbox.tcl
+InputName=msgbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1010,6 +1158,17 @@ InputName=obsolete
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\obsolete.tcl
+InputName=obsolete
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1042,6 +1201,17 @@ InputName=optMenu
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\optMenu.tcl
+InputName=optMenu
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1068,6 +1238,17 @@ InputName=palette
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\palette.tcl
+InputName=palette
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1100,6 +1281,17 @@ InputName=safetk
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\safetk.tcl
+InputName=safetk
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1126,6 +1318,17 @@ InputName=scale
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\scale.tcl
+InputName=scale
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1158,6 +1361,17 @@ InputName=scrlbar
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\scrlbar.tcl
+InputName=scrlbar
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1184,6 +1398,17 @@ InputName=tearoff
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\tearoff.tcl
+InputName=tearoff
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1216,6 +1441,17 @@ InputName=text
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\text.tcl
+InputName=text
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1242,6 +1478,17 @@ InputName=tk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\tk.tcl
+InputName=tk
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1274,6 +1521,17 @@ InputName=tkfbox
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\tkfbox.tcl
+InputName=tkfbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1303,6 +1561,17 @@ InputName=xmfbox
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\xmfbox.tcl
+InputName=xmfbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -1322,6 +1591,11 @@ SOURCE=.\rc\tk.rc
 !ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
 
 # ADD BASE RSC /l 0x409 /i "rc"
+# ADD RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD BASE RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
 # ADD RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
 
 !ENDIF 
