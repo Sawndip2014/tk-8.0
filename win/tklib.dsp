@@ -40,10 +40,11 @@ RSC=rc.exe
 # PROP Output_Dir "Release"
 # PROP Intermediate_Dir "Release"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /YX /FD /c
-# ADD CPP /nologo /W2 /GX /O2 /I "/src/tcl-8.0/win" /I "/src/tcl-8.0/generic" /I "/src/tk-8.0/win" /I "/src/tk-8.0/generic" /I "/src/tk-8.0/xlib" /I "/src/tk-8.0/bitmaps" /I "/src/tk-8.0/win/rc" /D "WIN32" /D "DEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl-8.0/win" /I /src/tcl-8.0/generic" /I /src/tk-8.0/win" /I /src/tk-8.0/generic" /I /src/tk-8.0/xlib" /I /src/tk-8.0/bitmaps" /I /src/tk-8.0/win/rc" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " /c
-# ADD BASE RSC /l 0x809 /d "NDEBUG"
-# ADD RSC /l 0x809 /d "NDEBUG"
+# ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
+# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /I /src/tcl-8.0/win /I /src/tc-l8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /c
+# SUBTRACT CPP /Ox /Oa /Ow /Og
+# ADD BASE RSC /l 0x809
+# ADD RSC /l 0x809
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -63,10 +64,10 @@ LIB32=link.exe -lib
 # PROP Output_Dir "Debug"
 # PROP Intermediate_Dir "Debug"
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /YX /FD /GZ /c
-# ADD CPP /nologo /W2 /Gm /GX /ZI /Od /I "/src/tcl-8.0/win" /I "/src/tcl-8.0/generic" /I "/src/tk-8.0/win" /I "/src/tk-8.0/generic" /I "/src/tk-8.0/xlib" /I "/src/tk-8.0/bitmaps" /I "/src/tk-8.0/win/rc" /D "WIN32" /D "DEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl8.0/win" /I /src/tcl8.0/generic" /I /src/tk8.0/win" /I /src/tk8.0/generic" /I /src/tk8.0/xlib" /I /src/tk8.0/bitmaps" /I /src/tk8.0/win/rc" /I /src/tcl-8.0/win" /I /src/tcl-8.0/generic" /I /src/tk-8.0/win" /I /src/tk-8.0/generic" /I /src/tk-8.0/xlib" /I /src/tk-8.0/bitmaps" /I /src/tk-8.0/win/rc" /GZ " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " /c
-# ADD BASE RSC /l 0x809 /d "_DEBUG"
-# ADD RSC /l 0x809 /d "_DEBUG"
+# ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
+# ADD CPP /nologo /W3 /GX /Z7 /Od /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /c
+# ADD BASE RSC /l 0x809
+# ADD RSC /l 0x809
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -110,6 +111,16 @@ SOURCE=..\generic\tkBitmap.c
 # Begin Source File
 
 SOURCE=..\generic\tkButton.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "c:/src/tcl-8.0/win" /I "c:/src/tcl-8.0/generic" /I "c:/src/tk-8.0/win" /I "c:/src/tk-8.0/xlib" /I "c:/src/tk-8.0/bitmaps" /I "c:/src/tk-8.0/win/rc"
+# SUBTRACT CPP /I "c:/src/tcl8.0/win" /I "c:/src/tcl8.0/generic" /I "c:/src/tk8.0/win" /I "c:/src/tk8.0/xlib" /I "c:/src/tk8.0/bitmaps" /I "c:/src/tk8.0/win/rc"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
