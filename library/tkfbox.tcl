@@ -822,9 +822,7 @@ proc tkFDialog_Create {w} {
     set data(dirMenu) [tk_optionMenu $f1.menu [format %s(selectPath) $dataName] ""]
     set data(upBtn) [button $f1.up]
     if {![info exists tkPriv(updirImage)]} {
-	set tkPriv(updirImage) [image create bitmap -data {
-#define updir_width 28
-#define updir_height 16
+	set tkPriv(updirImage) [image create bitmap -data {#define updir_width 28 #define updir_height 16
 static char updir_bits[] = {
    0x00, 0x00, 0x00, 0x00, 0x80, 0x1f, 0x00, 0x00, 0x40, 0x20, 0x00, 0x00,
    0x20, 0x40, 0x00, 0x00, 0xf0, 0xff, 0xff, 0x01, 0x10, 0x00, 0x00, 0x01,
