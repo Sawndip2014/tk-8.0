@@ -85,6 +85,94 @@ LIB32=link.exe -lib
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
+SOURCE=.\lib_bgerror.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_button.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_clrpick.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_comdlg.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_console.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_dialog.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_entry.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_focus.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_listbox.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_menu.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_msgbox.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_obsolete.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_optMenu.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_palette.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_safetk.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_scale.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_scrlbar.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_tearoff.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_text.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_tk.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_tkfbox.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_xmfbox.c
+# End Source File
+# Begin Source File
+
 SOURCE=.\stubs.c
 # End Source File
 # Begin Source File
@@ -488,6 +576,466 @@ SOURCE=..\xlib\xutil.c
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\tkWin.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\tkWinDefault.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\tkWinInt.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\tkWinPort.h
+# End Source File
+# End Group
+# Begin Group "Tcl Files"
+
+# PROP Default_Filter ".tcl"
+# Begin Source File
+
+SOURCE=..\library\bgerror.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\bgerror.tcl
+InputName=bgerror
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\button.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\button.tcl
+InputName=button
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\clrpick.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\clrpick.tcl
+InputName=clrpick
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\comdlg.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\comdlg.tcl
+InputName=comdlg
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\console.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\console.tcl
+InputName=console
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\dialog.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\dialog.tcl
+InputName=dialog
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\entry.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\entry.tcl
+InputName=entry
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\focus.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\focus.tcl
+InputName=focus
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\listbox.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\listbox.tcl
+InputName=listbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\menu.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\menu.tcl
+InputName=menu
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\msgbox.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\msgbox.tcl
+InputName=msgbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\obsolete.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\obsolete.tcl
+InputName=obsolete
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\optMenu.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\optMenu.tcl
+InputName=optMenu
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\palette.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\palette.tcl
+InputName=palette
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\safetk.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\safetk.tcl
+InputName=safetk
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\scale.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\scale.tcl
+InputName=scale
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\scrlbar.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\scrlbar.tcl
+InputName=scrlbar
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\tearoff.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\tearoff.tcl
+InputName=tearoff
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\text.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\text.tcl
+InputName=text
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\tk.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\tk.tcl
+InputName=tk
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\tkfbox.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\tkfbox.tcl
+InputName=tkfbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\xmfbox.tcl
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\xmfbox.tcl
+InputName=xmfbox
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
 # End Group
 # End Target
 # End Project
