@@ -406,6 +406,10 @@ SOURCE=.\tkWinDialog.c
 # End Source File
 # Begin Source File
 
+SOURCE=..\generic\tkWindow.c
+# End Source File
+# Begin Source File
+
 SOURCE=.\tkWinDraw.c
 # End Source File
 # Begin Source File
