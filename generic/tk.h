@@ -69,8 +69,10 @@
 #endif
 #ifndef _XLIB_H
 #   ifdef MAC_TCL
+/*
 #	include <Xlib.h>
 #	include <X.h>
+*/
 #   else
 #	include <X11/Xlib.h>
 #   endif
