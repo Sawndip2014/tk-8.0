@@ -41,7 +41,7 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
 BSC32=bscmake.exe
@@ -64,7 +64,7 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Debug"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /Z7 /Od /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /D "BUILD_tk" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
 BSC32=bscmake.exe
@@ -578,6 +578,78 @@ SOURCE=..\xlib\xutil.c
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
+SOURCE=..\generic\default.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\ks_names.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tk.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tk3d.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkButton.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkCanvas.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkColor.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkFileFilter.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkFont.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkInitScript.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkInt.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkMenu.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkMenubutton.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkPort.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkScale.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkScrollbar.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkSelect.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\generic\tkText.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\tkWin.h
 # End Source File
 # Begin Source File
@@ -1037,5 +1109,334 @@ InputName=xmfbox
 
 # End Source File
 # End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\rc\tk.rc
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD BASE RSC /l 0x409 /i "rc"
+# ADD RSC /l 0x809 /fo"\src\tk-8.0\win\tk.res" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic" /i "rc"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD BASE RSC /l 0x409 /i "rc"
+# ADD RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic" /i "rc"
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Source File
+
+SOURCE=.\rc\cursor00.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor02.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor04.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor06.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor08.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor0a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor0c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor0e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor10.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor12.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor14.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor16.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor18.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor1a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor1c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor1e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor20.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor22.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor24.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor26.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor28.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor2a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor2c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor2e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor30.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor32.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor34.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor36.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor38.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor3a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor3c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor3e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor40.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor42.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor44.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor46.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor48.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor4a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor4c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor4e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor50.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor52.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor54.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor56.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor58.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor5a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor5c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor60.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor62.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor64.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor66.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor68.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor6a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor6c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor6e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor70.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor72.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor74.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor76.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor78.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor7a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor7c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor7e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor80.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor82.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor84.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor86.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor88.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor8a.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor8c.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor8e.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor90.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor92.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor94.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor96.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\cursor98.cur
+# End Source File
+# Begin Source File
+
+SOURCE=.\rc\tk.ico
+# End Source File
 # End Target
 # End Project
