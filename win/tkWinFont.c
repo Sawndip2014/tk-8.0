@@ -144,6 +144,7 @@ TkpGetFontFromAttributes(tkFontPtr, tkwin, faPtr)
     Window window;
     HWND hwnd;
     HDC hdc;
+    int result=0;
 
     window = Tk_WindowId(((TkWindow *) tkwin)->mainPtr->winPtr);
     hwnd = (window == None) ? NULL : TkWinGetHWND(window);
@@ -162,7 +163,23 @@ TkpGetFontFromAttributes(tkFontPtr, tkwin, faPtr)
     lf.lfItalic		= faPtr->slant;
     lf.lfUnderline	= faPtr->underline;
     lf.lfStrikeOut	= faPtr->overstrike;
-    lf.lfCharSet	= DEFAULT_CHARSET;
+
+	/* try and match font with character set - KH */
+	result=strlen(faPtr->family);
+    if (strcmp(faPtr->family+result-3, "Cyr")==0) {
+        lf.lfCharSet	= RUSSIAN_CHARSET;
+    } else if (strcmp(faPtr->family+result-2, "CE")==0) {
+        lf.lfCharSet	= EASTEUROPE_CHARSET;    
+	} else if (strcmp(faPtr->family+result-6, "Baltic")==0) {
+        lf.lfCharSet	= BALTIC_CHARSET;    
+	} else if (strcmp(faPtr->family+result-3, "Tur")==0) {
+        lf.lfCharSet	= TURKISH_CHARSET;    
+	} else if (strcmp(faPtr->family+result-5, "Greek")==0) {
+        lf.lfCharSet	= GREEK_CHARSET;    
+	} else {
+        lf.lfCharSet	= DEFAULT_CHARSET;    
+	}
+
     lf.lfOutPrecision	= OUT_DEFAULT_PRECIS;
     lf.lfClipPrecision	= CLIP_DEFAULT_PRECIS;
     lf.lfQuality	= DEFAULT_QUALITY;
