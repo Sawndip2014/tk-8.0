@@ -20,29 +20,6 @@
  */
 #include "tkInitScript.h"
 
-extern char lib_tk[];
-extern char lib_button[];
-extern char lib_entry[];
-extern char lib_listbox[];
-extern char lib_menu[];
-extern char lib_scale[];
-extern char lib_scrlbar[];
-extern char lib_text[];
-
-extern char lib_bgerror[];
-extern char lib_clrpick[];
-extern char lib_comdlg[];
-extern char lib_dialog[];
-extern char lib_focus[];
-extern char lib_msgbox[];
-extern char lib_obsolete[];
-extern char lib_optMenu[];
-extern char lib_palette[];
-extern char lib_safetk[];
-extern char lib_tearoff[];
-extern char lib_tkfbox[];
-extern char lib_xmfbox[];
-
 
 /*
  *----------------------------------------------------------------------
@@ -66,74 +43,7 @@ int
 TkpInit(interp)
     Tcl_Interp *interp;
 {
-    if (Tcl_Eval(interp, lib_bgerror) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_clrpick) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_comdlg) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_dialog) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_focus) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_msgbox) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_obsolete) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_optMenu) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_palette) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_safetk) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_tearoff) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_tkfbox) != TCL_OK) {
-        return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_xmfbox) != TCL_OK) {
-        return TCL_ERROR;
-    }
-
-    if (Tcl_Eval(interp, initScript) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_tk) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_button) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_entry) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_listbox) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_menu) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_scale) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_scrlbar) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    if (Tcl_Eval(interp, lib_text) != TCL_OK) {
-    	return TCL_ERROR;
-    }
-    return TCL_OK;
+    return Tcl_Eval(interp, initScript);
 }
 
 /*
