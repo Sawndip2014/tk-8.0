@@ -65,7 +65,7 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Debug"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "\src\tcl-8.0\generic" /I "\src\tk-8.0\generic" /I "\src\tk-8.0\xlib" /I "\src\tk-8.0\xlib\X11" /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\tk-8.0\xlib\X11" /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
 BSC32=bscmake.exe
@@ -203,22 +203,98 @@ SOURCE=.\stubs.c
 # Begin Source File
 
 SOURCE=..\generic\tk3d.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+# SUBTRACT CPP /I "..\tk-8.0\xlib\X11"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkArgv.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkAtom.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkBind.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkBitmap.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
@@ -226,11 +302,15 @@ SOURCE=..\generic\tkButton.c
 
 !IF  "$(CFG)" == "tklib - Win32 Release"
 
-# ADD CPP /I "c:/src/tcl-8.0/win" /I "c:/src/tcl-8.0/generic" /I "c:/src/tk-8.0/win" /I "c:/src/tk-8.0/xlib" /I "c:/src/tk-8.0/bitmaps" /I "c:/src/tk-8.0/win/rc"
+# ADD CPP /I "c:/src/tcl-8.0/win" /I "c:/src/tcl-8.0/generic" /I "c:/src/tk-8.0/win" /I "c:/src/tk-8.0/xlib" /I "c:/src/tk-8.0/bitmaps" /I "c:/src/tk-8.0/win/rc" /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
 
 !ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
 
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
 !ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
 
 !ENDIF 
 
@@ -238,366 +318,1731 @@ SOURCE=..\generic\tkButton.c
 # Begin Source File
 
 SOURCE=..\generic\tkCanvArc.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvas.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvBmap.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvImg.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvLine.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvPoly.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvPs.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvText.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvUtil.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCanvWind.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkClipboard.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCmds.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkColor.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkConfig.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkConsole.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkCursor.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkEntry.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkError.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkEvent.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkFileFilter.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkFocus.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkFont.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkFrame.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkGC.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkGeometry.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkGet.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkGrab.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkGrid.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkImage.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkImgBmap.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkImgGIF.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkImgPhoto.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkImgPPM.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkImgUtil.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkListbox.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkMacWinMenu.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkMain.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkMenu.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkMenubutton.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkMenuDraw.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkMessage.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkOption.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkPack.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkPlace.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkPointer.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkRectOval.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkScale.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkScrollbar.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkSelect.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkSquare.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTest.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkText.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextBTree.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextDisp.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextImage.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextIndex.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextMark.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextTag.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTextWind.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkTrig.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\unix\tkUnixMenubu.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\unix\tkUnixScale.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkUtil.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkVisual.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWin3d.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinButton.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinClipboard.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinColor.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinCursor.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinDialog.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\generic\tkWindow.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinDraw.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinEmbed.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinFont.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinImage.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinInit.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinKey.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinMenu.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinPixmap.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinPointer.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinRegion.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinScrlbr.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinSend.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinWindow.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinWm.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=.\tkWinX.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\xlib\xcolors.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\xlib\xdraw.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\xlib\xgc.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\xlib\ximage.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE=..\xlib\xutil.c
+
+!IF  "$(CFG)" == "tklib - Win32 Release"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
+
+# ADD CPP /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
+
+# ADD CPP /I "..\..\tcl-8.0\generic" /I "..\generic" /I "..\xlib" /I "..\xlib\X11" /I "..\win" /I "..\bitmaps"
+
+!ENDIF 
+
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -706,7 +2151,7 @@ InputPath=..\library\bgerror.tcl
 InputName=bgerror
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -717,7 +2162,7 @@ InputPath=..\library\bgerror.tcl
 InputName=bgerror
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -728,7 +2173,7 @@ InputPath=..\library\bgerror.tcl
 InputName=bgerror
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -746,7 +2191,7 @@ InputPath=..\library\button.tcl
 InputName=button
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -757,7 +2202,7 @@ InputPath=..\library\button.tcl
 InputName=button
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -768,7 +2213,7 @@ InputPath=..\library\button.tcl
 InputName=button
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -786,7 +2231,7 @@ InputPath=..\library\clrpick.tcl
 InputName=clrpick
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -797,7 +2242,7 @@ InputPath=..\library\clrpick.tcl
 InputName=clrpick
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -808,7 +2253,7 @@ InputPath=..\library\clrpick.tcl
 InputName=clrpick
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -826,7 +2271,7 @@ InputPath=..\library\comdlg.tcl
 InputName=comdlg
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -837,7 +2282,7 @@ InputPath=..\library\comdlg.tcl
 InputName=comdlg
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -848,7 +2293,7 @@ InputPath=..\library\comdlg.tcl
 InputName=comdlg
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -866,7 +2311,7 @@ InputPath=..\library\console.tcl
 InputName=console
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -877,7 +2322,7 @@ InputPath=..\library\console.tcl
 InputName=console
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -888,7 +2333,7 @@ InputPath=..\library\console.tcl
 InputName=console
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -906,7 +2351,7 @@ InputPath=..\library\dialog.tcl
 InputName=dialog
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -917,7 +2362,7 @@ InputPath=..\library\dialog.tcl
 InputName=dialog
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -928,7 +2373,7 @@ InputPath=..\library\dialog.tcl
 InputName=dialog
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -946,7 +2391,7 @@ InputPath=..\library\entry.tcl
 InputName=entry
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -957,7 +2402,7 @@ InputPath=..\library\entry.tcl
 InputName=entry
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -968,7 +2413,7 @@ InputPath=..\library\entry.tcl
 InputName=entry
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -986,7 +2431,7 @@ InputPath=..\library\focus.tcl
 InputName=focus
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -997,7 +2442,7 @@ InputPath=..\library\focus.tcl
 InputName=focus
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1008,7 +2453,7 @@ InputPath=..\library\focus.tcl
 InputName=focus
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1026,7 +2471,7 @@ InputPath=..\library\listbox.tcl
 InputName=listbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1037,7 +2482,7 @@ InputPath=..\library\listbox.tcl
 InputName=listbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1048,7 +2493,7 @@ InputPath=..\library\listbox.tcl
 InputName=listbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1066,7 +2511,7 @@ InputPath=..\library\menu.tcl
 InputName=menu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1077,7 +2522,7 @@ InputPath=..\library\menu.tcl
 InputName=menu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1088,7 +2533,7 @@ InputPath=..\library\menu.tcl
 InputName=menu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1106,7 +2551,7 @@ InputPath=..\library\msgbox.tcl
 InputName=msgbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1117,7 +2562,7 @@ InputPath=..\library\msgbox.tcl
 InputName=msgbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1128,7 +2573,7 @@ InputPath=..\library\msgbox.tcl
 InputName=msgbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1146,7 +2591,7 @@ InputPath=..\library\obsolete.tcl
 InputName=obsolete
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1157,7 +2602,7 @@ InputPath=..\library\obsolete.tcl
 InputName=obsolete
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1168,7 +2613,7 @@ InputPath=..\library\obsolete.tcl
 InputName=obsolete
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1186,7 +2631,7 @@ InputPath=..\library\optMenu.tcl
 InputName=optMenu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1197,7 +2642,7 @@ InputPath=..\library\optMenu.tcl
 InputName=optMenu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1208,7 +2653,7 @@ InputPath=..\library\optMenu.tcl
 InputName=optMenu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1226,7 +2671,7 @@ InputPath=..\library\palette.tcl
 InputName=palette
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1237,7 +2682,7 @@ InputPath=..\library\palette.tcl
 InputName=palette
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1248,7 +2693,7 @@ InputPath=..\library\palette.tcl
 InputName=palette
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1266,7 +2711,7 @@ InputPath=..\library\safetk.tcl
 InputName=safetk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1277,7 +2722,7 @@ InputPath=..\library\safetk.tcl
 InputName=safetk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1288,7 +2733,7 @@ InputPath=..\library\safetk.tcl
 InputName=safetk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1306,7 +2751,7 @@ InputPath=..\library\scale.tcl
 InputName=scale
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1317,7 +2762,7 @@ InputPath=..\library\scale.tcl
 InputName=scale
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1328,7 +2773,7 @@ InputPath=..\library\scale.tcl
 InputName=scale
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1346,7 +2791,7 @@ InputPath=..\library\scrlbar.tcl
 InputName=scrlbar
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1357,7 +2802,7 @@ InputPath=..\library\scrlbar.tcl
 InputName=scrlbar
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1368,7 +2813,7 @@ InputPath=..\library\scrlbar.tcl
 InputName=scrlbar
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1386,7 +2831,7 @@ InputPath=..\library\tearoff.tcl
 InputName=tearoff
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1397,7 +2842,7 @@ InputPath=..\library\tearoff.tcl
 InputName=tearoff
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1408,7 +2853,7 @@ InputPath=..\library\tearoff.tcl
 InputName=tearoff
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1426,7 +2871,7 @@ InputPath=..\library\text.tcl
 InputName=text
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1437,7 +2882,7 @@ InputPath=..\library\text.tcl
 InputName=text
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1448,7 +2893,7 @@ InputPath=..\library\text.tcl
 InputName=text
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1466,7 +2911,7 @@ InputPath=..\library\tk.tcl
 InputName=tk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1477,7 +2922,7 @@ InputPath=..\library\tk.tcl
 InputName=tk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1488,7 +2933,7 @@ InputPath=..\library\tk.tcl
 InputName=tk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1506,7 +2951,7 @@ InputPath=..\library\tkfbox.tcl
 InputName=tkfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1517,7 +2962,7 @@ InputPath=..\library\tkfbox.tcl
 InputName=tkfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1528,7 +2973,7 @@ InputPath=..\library\tkfbox.tcl
 InputName=tkfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1546,7 +2991,7 @@ InputPath=..\library\xmfbox.tcl
 InputName=xmfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1557,7 +3002,7 @@ InputPath=..\library\xmfbox.tcl
 InputName=xmfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1568,7 +3013,7 @@ InputPath=..\library\xmfbox.tcl
 InputName=xmfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1586,17 +3031,17 @@ SOURCE=.\rc\tk.rc
 !IF  "$(CFG)" == "tklib - Win32 Release"
 
 # ADD BASE RSC /l 0x409 /i "rc"
-# ADD RSC /l 0x809 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
+# ADD RSC /l 0x809 /i "rc" /i "..\generic" /i "..\Xlib" /i "..\..\tcl-8.0\generic"
 
 !ELSEIF  "$(CFG)" == "tklib - Win32 Debug"
 
 # ADD BASE RSC /l 0x409 /i "rc"
-# ADD RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
+# ADD RSC /l 0x409 /i "rc" /i "..\generic" /i "..\Xlib" /i "..\..\tcl-8.0\generic"
 
 !ELSEIF  "$(CFG)" == "tklib - Win32 Debug IPv6"
 
-# ADD BASE RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
-# ADD RSC /l 0x409 /fo"\src\tk-8.0\win\tk.res" /i "rc" /i "\src\tk-8.0\win\rc" /i "\src\tk-8.0\generic" /i "\src\tk-8.0\Xlib" /i "\src\tcl-8.0\generic"
+# ADD BASE RSC /l 0x409 /i "rc" /i "..\generic" /i "..\Xlib" /i "..\..\tcl-8.0\generic"
+# ADD RSC /l 0x409 /i "rc" /i "..\generic" /i "..\Xlib" /i "..\..\tcl-8.0\generic"
 
 !ENDIF 
 
