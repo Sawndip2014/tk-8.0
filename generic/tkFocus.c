@@ -628,10 +628,17 @@ SetFocus(winPtr, force)
      *    already in this application or "force" was specified.
      */
 
+    /* since the tcl/tk code doesn't yet set the focus for embedded applications
+     * we'll have to set it manually in the application code.....so we need to bypass
+     * this check on Windows. KH
+     */
+#ifdef WIN32
     if ((topLevelPtr->flags & TK_EMBEDDED)
 	    && (displayFocusPtr->focusWinPtr == NULL)) {
 	TkpClaimFocus(topLevelPtr, force);
-    } else if ((displayFocusPtr->focusWinPtr != NULL) || force) {
+    } else 
+#endif
+    if ((displayFocusPtr->focusWinPtr != NULL) || force) {
 	/*
 	 * Generate events to shift focus between Tk windows.
 	 * We do this regardless of what TkpChangeFocus does with
