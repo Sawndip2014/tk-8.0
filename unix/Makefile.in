@@ -238,12 +238,18 @@ UNIXOBJS = tkUnix.o tkUnix3d.o tkUnixButton.o tkUnixColor.o tkUnixCursor.o \
 	tkUnixMenu.o tkUnixMenubu.o tkUnixScale.o tkUnixScrlbr.o \
 	tkUnixSelect.o tkUnixSend.o tkUnixWm.o tkUnixXId.o
 
+LIBRARY_OBJS = $(UNIX_DIR)/lib_bgerror.o $(UNIX_DIR)/lib_dialog.o $(UNIX_DIR)/lib_msgbox.o $(UNIX_DIR)/lib_scale.o $(UNIX_DIR)/lib_tkfbox.o \
+	$(UNIX_DIR)/lib_button.o $(UNIX_DIR)/lib_entry.o $(UNIX_DIR)/lib_obsolete.o $(UNIX_DIR)/lib_scrlbar.o $(UNIX_DIR)/lib_xmfbox.o \
+	$(UNIX_DIR)/lib_clrpick.o $(UNIX_DIR)/lib_focus.o $(UNIX_DIR)/lib_optMenu.o $(UNIX_DIR)/lib_tearoff.o $(UNIX_DIR)/lib_comdlg.o \
+	$(UNIX_DIR)/lib_listbox.o $(UNIX_DIR)/lib_palette.o $(UNIX_DIR)/lib_text.o $(UNIX_DIR)/lib_console.o $(UNIX_DIR)/lib_menu.o \
+	$(UNIX_DIR)/lib_safetk.o $(UNIX_DIR)/lib_tk.o
+
 OBJS =  tk3d.o tkArgv.o tkAtom.o tkBind.o tkBitmap.o tkClipboard.o tkCmds.o \
 	tkColor.o tkConfig.o tkCursor.o tkError.o tkEvent.o \
 	tkFocus.o tkFont.o tkGet.o tkGC.o tkGeometry.o tkGrab.o tkGrid.o \
 	tkMain.o tkOption.o tkPack.o tkPlace.o \
 	tkSelect.o tkUtil.o tkVisual.o tkWindow.o \
-	$(UNIXOBJS) $(WIDGOBJS) $(CANVOBJS) $(IMAGEOBJS) $(TEXTOBJS)
+	$(UNIXOBJS) $(WIDGOBJS) $(CANVOBJS) $(IMAGEOBJS) $(TEXTOBJS) $(LIBRARY_OBJS)
 
 SRCS = \
 	$(GENERIC_DIR)/tk3d.c $(GENERIC_DIR)/tkArgv.c \
@@ -302,7 +308,7 @@ HDRS = bltList.h \
 
 DEMOPROGS = browse hello ixset rmt rolodex square tcolor timer widget
 
-all: wish
+all: ${TK_LIB_FILE} #wish
 
 # The following target is configured by autoconf to generate either
 # a shared library or non-shared library for Tk.
@@ -485,7 +491,7 @@ Makefile: $(UNIX_DIR)/Makefile.in
 
 clean:
 	rm -f *.a *.o libtk* core errs *~ \#* TAGS *.E a.out errors \
-		tktest wish config.info lib.exp
+		tktest wish config.info lib.exp tcl2c config.cache
 
 distclean: clean
 	rm -f Makefile config.status config.cache config.log tkConfig.sh \
@@ -509,6 +515,80 @@ tkTestInit.o: $(UNIX_DIR)/tkAppInit.c
 	@if test -f tkAppInit.sav ; then \
 	    mv tkAppInit.sav tkAppInit.o; \
 	fi;
+
+# Libraries...
+
+$(UNIX_DIR)/tcl2c: $(GENERIC_DIR)/tcl2c.c
+	$(CC) $(GENERIC_DIR)/tcl2c.c -o $(UNIX_DIR)/tcl2c 
+
+$(UNIX_DIR)/lib_bgerror.o: $(SRC_DIR)/library/bgerror.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_bgerror < $(SRC_DIR)/library/bgerror.tcl > $(UNIX_DIR)/lib_bgerror.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_bgerror.c
+$(UNIX_DIR)/lib_dialog.o: $(SRC_DIR)/library/dialog.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_dialog < $(SRC_DIR)/library/dialog.tcl > $(UNIX_DIR)/lib_dialog.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_dialog.c
+$(UNIX_DIR)/lib_msgbox.o: $(SRC_DIR)/library/msgbox.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_msgbox < $(SRC_DIR)/library/msgbox.tcl > $(UNIX_DIR)/lib_msgbox.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_msgbox.c
+$(UNIX_DIR)/lib_scale.o: $(SRC_DIR)/library/scale.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_scale < $(SRC_DIR)/library/scale.tcl > $(UNIX_DIR)/lib_scale.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_scale.c
+$(UNIX_DIR)/lib_tkfbox.o: $(SRC_DIR)/library/tkfbox.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_tkfbox < $(SRC_DIR)/library/tkfbox.tcl > $(UNIX_DIR)/lib_tkfbox.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_tkfbox.c
+$(UNIX_DIR)/lib_button.o: $(SRC_DIR)/library/button.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_button < $(SRC_DIR)/library/button.tcl > $(UNIX_DIR)/lib_button.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_button.c
+$(UNIX_DIR)/lib_entry.o: $(SRC_DIR)/library/entry.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_entry < $(SRC_DIR)/library/entry.tcl > $(UNIX_DIR)/lib_entry.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_entry.c
+$(UNIX_DIR)/lib_obsolete.o: $(SRC_DIR)/library/obsolete.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_obsolete < $(SRC_DIR)/library/obsolete.tcl > $(UNIX_DIR)/lib_obsolete.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_obsolete.c
+$(UNIX_DIR)/lib_scrlbar.o: $(SRC_DIR)/library/scrlbar.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_scrlbar < $(SRC_DIR)/library/scrlbar.tcl > $(UNIX_DIR)/lib_scrlbar.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_scrlbar.c
+$(UNIX_DIR)/lib_xmfbox.o: $(SRC_DIR)/library/xmfbox.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_xmfbox < $(SRC_DIR)/library/xmfbox.tcl > $(UNIX_DIR)/lib_xmfbox.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_xmfbox.c
+$(UNIX_DIR)/lib_clrpick.o: $(SRC_DIR)/library/clrpick.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_clrpick < $(SRC_DIR)/library/clrpick.tcl > $(UNIX_DIR)/lib_clrpick.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_clrpick.c
+$(UNIX_DIR)/lib_focus.o: $(SRC_DIR)/library/focus.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_focus < $(SRC_DIR)/library/focus.tcl > $(UNIX_DIR)/lib_focus.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_focus.c
+$(UNIX_DIR)/lib_optMenu.o: $(SRC_DIR)/library/optMenu.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_optMenu < $(SRC_DIR)/library/optMenu.tcl > $(UNIX_DIR)/lib_optMenu.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_optMenu.c
+$(UNIX_DIR)/lib_tearoff.o: $(SRC_DIR)/library/tearoff.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_tearoff < $(SRC_DIR)/library/tearoff.tcl > $(UNIX_DIR)/lib_tearoff.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_tearoff.c
+$(UNIX_DIR)/lib_comdlg.o: $(SRC_DIR)/library/comdlg.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_comdlg < $(SRC_DIR)/library/comdlg.tcl > $(UNIX_DIR)/lib_comdlg.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_comdlg.c
+$(UNIX_DIR)/lib_listbox.o: $(SRC_DIR)/library/listbox.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_listbox < $(SRC_DIR)/library/listbox.tcl > $(UNIX_DIR)/lib_listbox.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_listbox.c
+$(UNIX_DIR)/lib_palette.o: $(SRC_DIR)/library/palette.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_palette < $(SRC_DIR)/library/palette.tcl > $(UNIX_DIR)/lib_palette.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_palette.c
+$(UNIX_DIR)/lib_text.o: $(SRC_DIR)/library/text.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_text < $(SRC_DIR)/library/text.tcl > $(UNIX_DIR)/lib_text.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_text.c
+$(UNIX_DIR)/lib_console.o: $(SRC_DIR)/library/console.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_console < $(SRC_DIR)/library/console.tcl > $(UNIX_DIR)/lib_console.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_console.c
+$(UNIX_DIR)/lib_menu.o: $(SRC_DIR)/library/menu.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_menu < $(SRC_DIR)/library/menu.tcl > $(UNIX_DIR)/lib_menu.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_menu.c
+$(UNIX_DIR)/lib_safetk.o: $(SRC_DIR)/library/safetk.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_safetk < $(SRC_DIR)/library/safetk.tcl > $(UNIX_DIR)/lib_safetk.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_safetk.c
+$(UNIX_DIR)/lib_tk.o: $(SRC_DIR)/library/tk.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_tk < $(SRC_DIR)/library/tk.tcl > $(UNIX_DIR)/lib_tk.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_tk.c
+
+#
 
 tk3d.o: $(GENERIC_DIR)/tk3d.c
 	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tk3d.c

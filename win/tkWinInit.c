@@ -20,6 +20,14 @@
  */
 #include "tkInitScript.h"
 
+extern char lib_tk[];
+extern char lib_button[];
+extern char lib_entry[];
+extern char lib_listbox[];
+extern char lib_menu[];
+extern char lib_scale[];
+extern char lib_scrlbar[];
+extern char lib_text[];
 
 /*
  *----------------------------------------------------------------------
@@ -43,7 +51,34 @@ int
 TkpInit(interp)
     Tcl_Interp *interp;
 {
-    return Tcl_Eval(interp, initScript);
+    if (Tcl_Eval(interp, initScript) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_tk) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_button) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_entry) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_listbox) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_menu) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_scale) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_scrlbar) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_text) != TCL_OK) {
+    	return TCL_ERROR;
+    }
+    return TCL_OK;
 }
 
 /*
