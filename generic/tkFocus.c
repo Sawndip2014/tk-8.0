@@ -632,7 +632,7 @@ SetFocus(winPtr, force)
      * we'll have to set it manually in the application code.....so we need to bypass
      * this check on Windows. KH
      */
-#ifdef WIN32
+#ifndef WIN32
     if ((topLevelPtr->flags & TK_EMBEDDED)
 	    && (displayFocusPtr->focusWinPtr == NULL)) {
 	TkpClaimFocus(topLevelPtr, force);
