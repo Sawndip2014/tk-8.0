@@ -238,11 +238,11 @@ UNIXOBJS = tkUnix.o tkUnix3d.o tkUnixButton.o tkUnixColor.o tkUnixCursor.o \
 	tkUnixMenu.o tkUnixMenubu.o tkUnixScale.o tkUnixScrlbr.o \
 	tkUnixSelect.o tkUnixSend.o tkUnixWm.o tkUnixXId.o
 
-LIBRARY_OBJS = lib_bgerror.o lib_dialog.o lib_msgbox.o lib_scale.o lib_tkfbox.o \
-	lib_button.o lib_entry.o lib_obsolete.o lib_scrlbar.o lib_xmfbox.o \
-	lib_clrpick.o lib_focus.o lib_optMenu.o lib_tearoff.o lib_comdlg.o \
-	lib_listbox.o lib_palette.o lib_text.o lib_console.o lib_menu.o \
-	lib_safetk.o lib_tk.o
+LIBRARY_OBJS = $(UNIX_DIR)/lib_bgerror.o $(UNIX_DIR)/lib_dialog.o $(UNIX_DIR)/lib_msgbox.o $(UNIX_DIR)/lib_scale.o $(UNIX_DIR)/lib_tkfbox.o \
+	$(UNIX_DIR)/lib_button.o $(UNIX_DIR)/lib_entry.o $(UNIX_DIR)/lib_obsolete.o $(UNIX_DIR)/lib_scrlbar.o $(UNIX_DIR)/lib_xmfbox.o \
+	$(UNIX_DIR)/lib_clrpick.o $(UNIX_DIR)/lib_focus.o $(UNIX_DIR)/lib_optMenu.o $(UNIX_DIR)/lib_tearoff.o $(UNIX_DIR)/lib_comdlg.o \
+	$(UNIX_DIR)/lib_listbox.o $(UNIX_DIR)/lib_palette.o $(UNIX_DIR)/lib_text.o $(UNIX_DIR)/lib_console.o $(UNIX_DIR)/lib_menu.o \
+	$(UNIX_DIR)/lib_safetk.o $(UNIX_DIR)/lib_tk.o
 
 OBJS =  tk3d.o tkArgv.o tkAtom.o tkBind.o tkBitmap.o tkClipboard.o tkCmds.o \
 	tkColor.o tkConfig.o tkCursor.o tkError.o tkEvent.o \
