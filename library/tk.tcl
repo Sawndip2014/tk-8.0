@@ -145,13 +145,14 @@ switch $tcl_platform(platform) {
 # ----------------------------------------------------------------------
 
 if {$tcl_platform(platform) != "macintosh"} {
-    source $tk_library/button.tcl
-    source $tk_library/entry.tcl
-    source $tk_library/listbox.tcl
-    source $tk_library/menu.tcl
-    source $tk_library/scale.tcl
-    source $tk_library/scrlbar.tcl
-    source $tk_library/text.tcl
+    # This is done by the C code now... (csp)
+    #source $tk_library/button.tcl
+    #source $tk_library/entry.tcl
+    #source $tk_library/listbox.tcl
+    #source $tk_library/menu.tcl
+    #source $tk_library/scale.tcl
+    #source $tk_library/scrlbar.tcl
+    #source $tk_library/text.tcl
 }
 
 # ----------------------------------------------------------------------
