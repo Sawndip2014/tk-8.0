@@ -639,8 +639,8 @@ UpdateWrapper(winPtr)
     TkWindow *winPtr;		/* Top-level window to redecorate. */
 {
     register WmInfo *wmPtr = winPtr->wmInfoPtr;
-    HWND parentHWND = NULL, oldWrapper;
-    HWND child = TkWinGetHWND(winPtr->window);
+    HWND parentHWND , oldWrapper;
+    HWND child;
     int x, y, width, height, state;
     WINDOWPLACEMENT place;
 
@@ -2147,7 +2147,7 @@ Tk_SetGrid(tkwin, reqWidth, reqHeight, widthInc, heightInc)
 	    && (wmPtr->widthInc == widthInc)
 	    && (wmPtr->heightInc == heightInc)
 	    && ((wmPtr->sizeHintsFlags & (PBaseSize|PResizeInc))
-		    == (PBaseSize|PResizeInc))) {
+		    == PBaseSize|PResizeInc)) {
 	return;
     }
 
@@ -3546,14 +3546,14 @@ InstallColormaps(hwnd, message, isForemost)
 	}
 
 	systemPalette = TkWinGetPalette(winPtr->atts.colormap);
-	dc = GetDC(hwnd);
-	oldPalette = SelectPalette(dc, systemPalette, FALSE);
-	if (RealizePalette(dc)) {
+	dc = CkGetDC(hwnd);
+	oldPalette = CkSelectPalette(dc, systemPalette, FALSE);
+	if (CkRealizePalette(dc)) {
 	    RefreshColormap(winPtr->atts.colormap);
 	} else if (wmPtr->cmapCount > 1) {
-	    SelectPalette(dc, oldPalette, TRUE);
-	    RealizePalette(dc);
-	    ReleaseDC(hwnd, dc);
+	    CkSelectPalette(dc, oldPalette, TRUE);
+	    CkRealizePalette(dc);
+	    CkReleaseDC(hwnd, dc);
 	    SendMessage(hwnd, WM_PALETTECHANGED, (WPARAM)hwnd,
 		    (LPARAM)NULL);
 	    return TRUE;
@@ -3581,24 +3581,24 @@ InstallColormaps(hwnd, message, isForemost)
 	    winPtr = wmPtr->cmapList[1];
 	    i = 2;
 	}
-	dc = GetDC(hwnd);
-	oldPalette = SelectPalette(dc,
+	dc = CkGetDC(hwnd);
+	oldPalette = CkSelectPalette(dc,
 		TkWinGetPalette(winPtr->atts.colormap), TRUE);
-	if (RealizePalette(dc)) {
+	if (CkRealizePalette(dc)) {
 	    RefreshColormap(winPtr->atts.colormap);
 	}
 	for (; i < wmPtr->cmapCount; i++) {
 	    winPtr = wmPtr->cmapList[i];
-	    SelectPalette(dc, TkWinGetPalette(winPtr->atts.colormap), TRUE);
-	    if (RealizePalette(dc)) {
+	    CkSelectPalette(dc, TkWinGetPalette(winPtr->atts.colormap), TRUE);
+	    if (CkRealizePalette(dc)) {
 		RefreshColormap(winPtr->atts.colormap);
 	    }
 	}
     }
 
-    SelectPalette(dc, oldPalette, TRUE);
-    RealizePalette(dc);
-    ReleaseDC(hwnd, dc);
+    CkSelectPalette(dc, oldPalette, TRUE);
+    CkRealizePalette(dc);
+    CkReleaseDC(hwnd, dc);
     return TRUE;
 }
 
