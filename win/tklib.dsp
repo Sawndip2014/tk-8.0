@@ -728,7 +728,7 @@ InputPath=..\library\bgerror.tcl
 InputName=bgerror
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -768,7 +768,7 @@ InputPath=..\library\button.tcl
 InputName=button
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -808,7 +808,7 @@ InputPath=..\library\clrpick.tcl
 InputName=clrpick
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -848,7 +848,7 @@ InputPath=..\library\comdlg.tcl
 InputName=comdlg
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -888,7 +888,7 @@ InputPath=..\library\console.tcl
 InputName=console
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -928,7 +928,7 @@ InputPath=..\library\dialog.tcl
 InputName=dialog
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -968,7 +968,7 @@ InputPath=..\library\entry.tcl
 InputName=entry
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1008,7 +1008,7 @@ InputPath=..\library\focus.tcl
 InputName=focus
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1048,7 +1048,7 @@ InputPath=..\library\listbox.tcl
 InputName=listbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1088,7 +1088,7 @@ InputPath=..\library\menu.tcl
 InputName=menu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1128,7 +1128,7 @@ InputPath=..\library\msgbox.tcl
 InputName=msgbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1168,7 +1168,7 @@ InputPath=..\library\obsolete.tcl
 InputName=obsolete
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1208,7 +1208,7 @@ InputPath=..\library\optMenu.tcl
 InputName=optMenu
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1248,7 +1248,7 @@ InputPath=..\library\palette.tcl
 InputName=palette
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1288,7 +1288,7 @@ InputPath=..\library\safetk.tcl
 InputName=safetk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1328,7 +1328,7 @@ InputPath=..\library\scale.tcl
 InputName=scale
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1368,7 +1368,7 @@ InputPath=..\library\scrlbar.tcl
 InputName=scrlbar
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1408,7 +1408,7 @@ InputPath=..\library\tearoff.tcl
 InputName=tearoff
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1448,7 +1448,7 @@ InputPath=..\library\text.tcl
 InputName=text
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1488,7 +1488,7 @@ InputPath=..\library\tk.tcl
 InputName=tk
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1528,7 +1528,7 @@ InputPath=..\library\tkfbox.tcl
 InputName=tkfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -1568,7 +1568,7 @@ InputPath=..\library\xmfbox.tcl
 InputName=xmfbox
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
