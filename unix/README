@@ -16,9 +16,8 @@ How To Compile And Install Tk:
 ------------------------------
 
 (a) Make sure that the Tcl 8.0 release is present in the directory
-    ../../tcl8.0 (or else use the "--with-tcl" switch described below). 
-    This release of Tk will only work with Tcl 8.0. Also, be sure that
-    you have configured Tcl before you configure Tk.
+    ../../tcl-8.0. This release of Tk will only work with Tcl 8.0. 
+    Also, be sure that you have configured Tcl before you configure Tk.
 
 (b) Check for patches as described in ../README.
 
@@ -32,20 +31,7 @@ How To Compile And Install Tk:
     Makefile.  The configure script allows you to customize the Tcl
     configuration for your site; for details on how you can do this,
     type "./configure -help" or refer to the autoconf documentation (not
-    included here).  Tk's "configure" script supports the following
-    special switches in addition to the standard ones:
-	--enable-gcc		If this switch is set, Tk will configure
-				itself to use gcc if it is available on your
-				system.  Note:  it is not safe to modify the
-				Makefile to use gcc after configure is run.
-	--with-tcl=DIR		Specifies the directory containing the Tcl
-				binaries and Tcl's platform-dependent
-				configuration information.  By default
-				the Tcl directory is assumed to be in the
-				location given by (a) above.
-	--enable-shared		If this switch is specified, Tk will compile
-				itself as a shared library if it can figure
-				out how to do that on this platform.
+
     Note: be sure to use only absolute path names (those starting with "/")
     in the --prefix and --exec_prefix options.
 
