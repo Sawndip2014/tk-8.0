@@ -1940,7 +1940,7 @@ TkDoConfigureNotify(winPtr)
 void
 Tk_SetClass(tkwin, className)
     Tk_Window tkwin;		/* Token for window to assign class. */
-    char *className;		/* New class for tkwin. */
+    const char *className;		/* New class for tkwin. */
 {
     register TkWindow *winPtr = (TkWindow *) tkwin;
 

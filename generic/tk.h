@@ -1406,7 +1406,7 @@ EXTERN char *		Tk_SetAppName _ANSI_ARGS_((Tk_Window tkwin,
 EXTERN void		Tk_SetBackgroundFromBorder _ANSI_ARGS_((
 			    Tk_Window tkwin, Tk_3DBorder border));
 EXTERN void		Tk_SetClass _ANSI_ARGS_((Tk_Window tkwin,
-			    char *className));
+			    const char *className));
 EXTERN void		Tk_SetGrid _ANSI_ARGS_((Tk_Window tkwin,
 			    int reqWidth, int reqHeight, int gridWidth,
 			    int gridHeight));
