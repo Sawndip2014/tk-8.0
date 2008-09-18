@@ -1,169 +1,242 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.10"
+	Version="9.00"
 	Name="tklib"
-	SccProjectName=""
-	SccLocalPath="">
+	ProjectGUID="{9EC5870B-D5DF-43F6-B16E-0D7530996AB8}"
+	TargetFrameworkVersion="131072"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32"/>
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory=".\Debug"
 			IntermediateDirectory=".\Debug"
 			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\tcl-8.0\generic,..\generic,..\xlib,..\tk-8.0\xlib\X11"
 				PreprocessorDefinitions="STATIC_BUILD;WIN32;NDEBUG;_WINDOWS;_MT;_WIN32;_X86_=1;try=__try;except=__except"
-				RuntimeLibrary="5"
-				UsePrecompiledHeader="2"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="0"
 				PrecompiledHeaderFile=".\Debug/tklib.pch"
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
 				WarningLevel="3"
-				SuppressStartupBanner="TRUE"
+				SuppressStartupBanner="true"
 				DebugInformationFormat="4"
-				CompileAs="0"/>
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\Debug\tklib.lib"
-				SuppressStartupBanner="TRUE"/>
-			<Tool
-				Name="VCMIDLTool"/>
-			<Tool
-				Name="VCPostBuildEventTool"/>
-			<Tool
-				Name="VCPreBuildEventTool"/>
-			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				Culture="2057"
-				ResourceOutputFileName="tk.res"/>
+				ResourceOutputFileName="tk.res"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"/>
+				Name="VCLibrarianTool"
+				OutputFile=".\Debug\tklib.lib"
+				SuppressStartupBanner="true"
+			/>
 			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory=".\Release"
 			IntermediateDirectory=".\Release"
 			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
 				Optimization="4"
 				InlineFunctionExpansion="1"
-				EnableIntrinsicFunctions="TRUE"
+				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="1"
-				OmitFramePointers="TRUE"
+				OmitFramePointers="true"
 				AdditionalIncludeDirectories="..\..\tcl-8.0\generic,..\generic,..\xlib,..\tk-8.0\xlib\X11"
 				PreprocessorDefinitions="STATIC_BUILD;WIN32;NDEBUG;_WINDOWS;_MT;_WIN32;_X86_=1;try=__try;except=__except"
-				StringPooling="TRUE"
-				RuntimeLibrary="4"
-				EnableFunctionLevelLinking="TRUE"
-				UsePrecompiledHeader="2"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
 				PrecompiledHeaderFile=".\Release/tklib.pch"
 				AssemblerListingLocation=".\Release/"
 				ObjectFile=".\Release/"
 				ProgramDataBaseFileName=".\Release/"
 				WarningLevel="3"
-				SuppressStartupBanner="TRUE"
-				CompileAs="0"/>
+				SuppressStartupBanner="true"
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\Release\tklib.lib"
-				SuppressStartupBanner="TRUE"/>
-			<Tool
-				Name="VCMIDLTool"/>
-			<Tool
-				Name="VCPostBuildEventTool"/>
-			<Tool
-				Name="VCPreBuildEventTool"/>
-			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				Culture="2057"
-				ResourceOutputFileName="tk.res"/>
+				ResourceOutputFileName="tk.res"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"/>
+				Name="VCLibrarianTool"
+				OutputFile=".\Release\tklib.lib"
+				SuppressStartupBanner="true"
+			/>
 			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Debug IPv6|Win32"
 			OutputDirectory=".\Debug_IPv6"
 			IntermediateDirectory=".\Debug_IPv6"
 			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
 				Optimization="0"
 				AdditionalIncludeDirectories="\src\tcl-8.0\generic,\src\tk-8.0\generic,\src\tk-8.0\xlib,\src\tk-8.0\xlib\X11"
 				PreprocessorDefinitions="STATIC_BUILD;WIN32;NDEBUG;_WINDOWS;_MT;_WIN32;_X86_=1;try=__try;except=__except"
-				RuntimeLibrary="5"
-				UsePrecompiledHeader="2"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="0"
 				PrecompiledHeaderFile=".\Debug_IPv6/tklib.pch"
 				AssemblerListingLocation=".\Debug_IPv6/"
 				ObjectFile=".\Debug_IPv6/"
 				ProgramDataBaseFileName=".\Debug_IPv6/"
 				WarningLevel="3"
-				SuppressStartupBanner="TRUE"
+				SuppressStartupBanner="true"
 				DebugInformationFormat="4"
-				CompileAs="0"/>
+				CompileAs="0"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\Debug_IPv6\tklib.lib"
-				SuppressStartupBanner="TRUE"/>
-			<Tool
-				Name="VCMIDLTool"/>
-			<Tool
-				Name="VCPostBuildEventTool"/>
-			<Tool
-				Name="VCPreBuildEventTool"/>
-			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				Culture="2057"
-				ResourceOutputFileName="tk.res"/>
+				ResourceOutputFileName="tk.res"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"/>
+				Name="VCLibrarianTool"
+				OutputFile=".\Debug_IPv6\tklib.lib"
+				SuppressStartupBanner="true"
+			/>
 			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
 	<References>
@@ -171,4053 +244,5090 @@
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+			>
 			<File
-				RelativePath="lib_bgerror.c">
+				RelativePath="lib_bgerror.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_button.c">
+				RelativePath="lib_button.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_clrpick.c">
+				RelativePath="lib_clrpick.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_comdlg.c">
+				RelativePath="lib_comdlg.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_console.c">
+				RelativePath="lib_console.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_dialog.c">
+				RelativePath="lib_dialog.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_entry.c">
+				RelativePath="lib_entry.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_focus.c">
+				RelativePath="lib_focus.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_listbox.c">
+				RelativePath="lib_listbox.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_menu.c">
+				RelativePath="lib_menu.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_msgbox.c">
+				RelativePath="lib_msgbox.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_obsolete.c">
+				RelativePath="lib_obsolete.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_optMenu.c">
+				RelativePath="lib_optMenu.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_palette.c">
+				RelativePath="lib_palette.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_safetk.c">
+				RelativePath="lib_safetk.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_scale.c">
+				RelativePath="lib_scale.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_scrlbar.c">
+				RelativePath="lib_scrlbar.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_tearoff.c">
+				RelativePath="lib_tearoff.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_text.c">
+				RelativePath="lib_text.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_tk.c">
+				RelativePath="lib_tk.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_tkfbox.c">
+				RelativePath="lib_tkfbox.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="lib_xmfbox.c">
+				RelativePath="lib_xmfbox.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="stubs.c">
+				RelativePath="stubs.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tk3d.c">
+				RelativePath="..\generic\tk3d.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps;$(NoInherit)"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkArgv.c">
+				RelativePath="..\generic\tkArgv.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkAtom.c">
+				RelativePath="..\generic\tkAtom.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkBind.c">
+				RelativePath="..\generic\tkBind.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkBitmap.c">
+				RelativePath="..\generic\tkBitmap.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkButton.c">
+				RelativePath="..\generic\tkButton.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="c:/src/tcl-8.0/win;c:/src/tcl-8.0/generic;c:/src/tk-8.0/win;c:/src/tk-8.0/xlib;c:/src/tk-8.0/bitmaps;c:/src/tk-8.0/win/rc;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvArc.c">
+				RelativePath="..\generic\tkCanvArc.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvas.c">
+				RelativePath="..\generic\tkCanvas.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvBmap.c">
+				RelativePath="..\generic\tkCanvBmap.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvImg.c">
+				RelativePath="..\generic\tkCanvImg.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvLine.c">
+				RelativePath="..\generic\tkCanvLine.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvPoly.c">
+				RelativePath="..\generic\tkCanvPoly.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvPs.c">
+				RelativePath="..\generic\tkCanvPs.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvText.c">
+				RelativePath="..\generic\tkCanvText.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvUtil.c">
+				RelativePath="..\generic\tkCanvUtil.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvWind.c">
+				RelativePath="..\generic\tkCanvWind.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkClipboard.c">
+				RelativePath="..\generic\tkClipboard.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCmds.c">
+				RelativePath="..\generic\tkCmds.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkColor.c">
+				RelativePath="..\generic\tkColor.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkConfig.c">
+				RelativePath="..\generic\tkConfig.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkConsole.c">
+				RelativePath="..\generic\tkConsole.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkCursor.c">
+				RelativePath="..\generic\tkCursor.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkEntry.c">
+				RelativePath="..\generic\tkEntry.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkError.c">
+				RelativePath="..\generic\tkError.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkEvent.c">
+				RelativePath="..\generic\tkEvent.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkFileFilter.c">
+				RelativePath="..\generic\tkFileFilter.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkFocus.c">
+				RelativePath="..\generic\tkFocus.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkFont.c">
+				RelativePath="..\generic\tkFont.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkFrame.c">
+				RelativePath="..\generic\tkFrame.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkGC.c">
+				RelativePath="..\generic\tkGC.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkGeometry.c">
+				RelativePath="..\generic\tkGeometry.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkGet.c">
+				RelativePath="..\generic\tkGet.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkGrab.c">
+				RelativePath="..\generic\tkGrab.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkGrid.c">
+				RelativePath="..\generic\tkGrid.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkImage.c">
+				RelativePath="..\generic\tkImage.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkImgBmap.c">
+				RelativePath="..\generic\tkImgBmap.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkImgGIF.c">
+				RelativePath="..\generic\tkImgGIF.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkImgPhoto.c">
+				RelativePath="..\generic\tkImgPhoto.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkImgPPM.c">
+				RelativePath="..\generic\tkImgPPM.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkImgUtil.c">
+				RelativePath="..\generic\tkImgUtil.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkListbox.c">
+				RelativePath="..\generic\tkListbox.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkMacWinMenu.c">
+				RelativePath="..\generic\tkMacWinMenu.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkMain.c">
+				RelativePath="..\generic\tkMain.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkMenu.c">
+				RelativePath="..\generic\tkMenu.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkMenubutton.c">
+				RelativePath="..\generic\tkMenubutton.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkMenuDraw.c">
+				RelativePath="..\generic\tkMenuDraw.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkMessage.c">
+				RelativePath="..\generic\tkMessage.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkOption.c">
+				RelativePath="..\generic\tkOption.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkPack.c">
+				RelativePath="..\generic\tkPack.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkPlace.c">
+				RelativePath="..\generic\tkPlace.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkPointer.c">
+				RelativePath="..\generic\tkPointer.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkRectOval.c">
+				RelativePath="..\generic\tkRectOval.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkScale.c">
+				RelativePath="..\generic\tkScale.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkScrollbar.c">
+				RelativePath="..\generic\tkScrollbar.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkSelect.c">
+				RelativePath="..\generic\tkSelect.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkSquare.c">
+				RelativePath="..\generic\tkSquare.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTest.c">
+				RelativePath="..\generic\tkTest.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkText.c">
+				RelativePath="..\generic\tkText.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextBTree.c">
+				RelativePath="..\generic\tkTextBTree.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextDisp.c">
+				RelativePath="..\generic\tkTextDisp.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextImage.c">
+				RelativePath="..\generic\tkTextImage.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextIndex.c">
+				RelativePath="..\generic\tkTextIndex.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextMark.c">
+				RelativePath="..\generic\tkTextMark.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextTag.c">
+				RelativePath="..\generic\tkTextTag.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTextWind.c">
+				RelativePath="..\generic\tkTextWind.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkTrig.c">
+				RelativePath="..\generic\tkTrig.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\unix\tkUnixMenubu.c">
+				RelativePath="..\unix\tkUnixMenubu.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\unix\tkUnixScale.c">
+				RelativePath="..\unix\tkUnixScale.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkUtil.c">
+				RelativePath="..\generic\tkUtil.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkVisual.c">
+				RelativePath="..\generic\tkVisual.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWin3d.c">
+				RelativePath="tkWin3d.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinButton.c">
+				RelativePath="tkWinButton.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinClipboard.c">
+				RelativePath="tkWinClipboard.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinColor.c">
+				RelativePath="tkWinColor.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinCursor.c">
+				RelativePath="tkWinCursor.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinDialog.c">
+				RelativePath="tkWinDialog.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\generic\tkWindow.c">
+				RelativePath="..\generic\tkWindow.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinDraw.c">
+				RelativePath="tkWinDraw.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinEmbed.c">
+				RelativePath="tkWinEmbed.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinFont.c">
+				RelativePath="tkWinFont.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinImage.c">
+				RelativePath="tkWinImage.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinInit.c">
+				RelativePath="tkWinInit.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinKey.c">
+				RelativePath="tkWinKey.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinMenu.c">
+				RelativePath="tkWinMenu.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinPixmap.c">
+				RelativePath="tkWinPixmap.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinPointer.c">
+				RelativePath="tkWinPointer.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinRegion.c">
+				RelativePath="tkWinRegion.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinScrlbr.c">
+				RelativePath="tkWinScrlbr.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinSend.c">
+				RelativePath="tkWinSend.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinWindow.c">
+				RelativePath="tkWinWindow.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinWm.c">
+				RelativePath="tkWinWm.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tkWinX.c">
+				RelativePath="tkWinX.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\xlib\xcolors.c">
+				RelativePath="..\xlib\xcolors.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\xlib\xdraw.c">
+				RelativePath="..\xlib\xdraw.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\xlib\xgc.c">
+				RelativePath="..\xlib\xgc.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\xlib\ximage.c">
+				RelativePath="..\xlib\ximage.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\xlib\xutil.c">
+				RelativePath="..\xlib\xutil.c"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						AdditionalIncludeDirectories="..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories="..\..\tcl-8.0\generic;..\generic;..\xlib;..\xlib\X11;..\win;..\bitmaps"
-						PreprocessorDefinitions=""/>
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl">
+			Filter="h;hpp;hxx;hm;inl"
+			>
 			<File
-				RelativePath="..\generic\default.h">
+				RelativePath="..\generic\default.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\ks_names.h">
+				RelativePath="..\generic\ks_names.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tk.h">
+				RelativePath="..\generic\tk.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tk3d.h">
+				RelativePath="..\generic\tk3d.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkButton.h">
+				RelativePath="..\generic\tkButton.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkCanvas.h">
+				RelativePath="..\generic\tkCanvas.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkColor.h">
+				RelativePath="..\generic\tkColor.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkFileFilter.h">
+				RelativePath="..\generic\tkFileFilter.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkFont.h">
+				RelativePath="..\generic\tkFont.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkInitScript.h">
+				RelativePath="..\generic\tkInitScript.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkInt.h">
+				RelativePath="..\generic\tkInt.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkMenu.h">
+				RelativePath="..\generic\tkMenu.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkMenubutton.h">
+				RelativePath="..\generic\tkMenubutton.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkPort.h">
+				RelativePath="..\generic\tkPort.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkScale.h">
+				RelativePath="..\generic\tkScale.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkScrollbar.h">
+				RelativePath="..\generic\tkScrollbar.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkSelect.h">
+				RelativePath="..\generic\tkSelect.h"
+				>
 			</File>
 			<File
-				RelativePath="..\generic\tkText.h">
+				RelativePath="..\generic\tkText.h"
+				>
 			</File>
 			<File
-				RelativePath="tkWin.h">
+				RelativePath="tkWin.h"
+				>
 			</File>
 			<File
-				RelativePath="tkWinDefault.h">
+				RelativePath="tkWinDefault.h"
+				>
 			</File>
 			<File
-				RelativePath="tkWinInt.h">
+				RelativePath="tkWinInt.h"
+				>
 			</File>
 			<File
-				RelativePath="tkWinPort.h">
+				RelativePath="tkWinPort.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Tcl Files"
-			Filter=".tcl">
+			Filter=".tcl"
+			>
 			<File
-				RelativePath="..\library\bgerror.tcl">
+				RelativePath="..\library\bgerror.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\button.tcl">
+				RelativePath="..\library\button.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\clrpick.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\comdlg.tcl">
+				RelativePath="..\library\clrpick.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\console.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\dialog.tcl">
+				RelativePath="..\library\comdlg.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\entry.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\focus.tcl">
+				RelativePath="..\library\console.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\listbox.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\menu.tcl">
+				RelativePath="..\library\dialog.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\msgbox.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\obsolete.tcl">
+				RelativePath="..\library\entry.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\optMenu.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\palette.tcl">
+				RelativePath="..\library\focus.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\safetk.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\scale.tcl">
+				RelativePath="..\library\listbox.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\scrlbar.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\tearoff.tcl">
+				RelativePath="..\library\menu.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\text.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\tk.tcl">
+				RelativePath="..\library\msgbox.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\library\tkfbox.tcl">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug IPv6|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\library\xmfbox.tcl">
+				RelativePath="..\library\obsolete.tcl"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
-"
-						Outputs="lib_$(InputName).c"/>
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\optMenu.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\palette.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\safetk.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\scale.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\scrlbar.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\tearoff.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\text.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\tk.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\tkfbox.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\xmfbox.tcl"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug IPv6|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="..\..\tcl-8.0\win\tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c&#x0D;&#x0A;"
+						Outputs="lib_$(InputName).c"
+					/>
 				</FileConfiguration>
 			</File>
 		</Filter>
 		<Filter
 			Name="Resource Files"
-			Filter="">
+			>
 			<File
-				RelativePath="rc\tk.rc">
+				RelativePath="rc\tk.rc"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCResourceCompilerTool"
 						Culture="1033"
-						AdditionalIncludeDirectories="rc;..\generic;..\Xlib;..\..\tcl-8.0\generic"/>
+						AdditionalIncludeDirectories="rc;..\generic;..\Xlib;..\..\tcl-8.0\generic"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCResourceCompilerTool"
-						AdditionalIncludeDirectories="rc;..\generic;..\Xlib;..\..\tcl-8.0\generic"/>
+						AdditionalIncludeDirectories="rc;..\generic;..\Xlib;..\..\tcl-8.0\generic"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug IPv6|Win32">
+					Name="Debug IPv6|Win32"
+					>
 					<Tool
 						Name="VCResourceCompilerTool"
 						Culture="1033"
-						AdditionalIncludeDirectories="rc;..\generic;..\Xlib;..\..\tcl-8.0\generic"/>
+						AdditionalIncludeDirectories="rc;..\generic;..\Xlib;..\..\tcl-8.0\generic"
+					/>
 				</FileConfiguration>
 			</File>
 		</Filter>
 		<File
-			RelativePath="rc\cursor00.cur">
+			RelativePath="rc\cursor00.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor02.cur">
+			RelativePath="rc\cursor02.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor04.cur">
+			RelativePath="rc\cursor04.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor06.cur">
+			RelativePath="rc\cursor06.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor08.cur">
+			RelativePath="rc\cursor08.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor0a.cur">
+			RelativePath="rc\cursor0a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor0c.cur">
+			RelativePath="rc\cursor0c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor0e.cur">
+			RelativePath="rc\cursor0e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor10.cur">
+			RelativePath="rc\cursor10.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor12.cur">
+			RelativePath="rc\cursor12.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor14.cur">
+			RelativePath="rc\cursor14.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor16.cur">
+			RelativePath="rc\cursor16.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor18.cur">
+			RelativePath="rc\cursor18.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor1a.cur">
+			RelativePath="rc\cursor1a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor1c.cur">
+			RelativePath="rc\cursor1c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor1e.cur">
+			RelativePath="rc\cursor1e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor20.cur">
+			RelativePath="rc\cursor20.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor22.cur">
+			RelativePath="rc\cursor22.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor24.cur">
+			RelativePath="rc\cursor24.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor26.cur">
+			RelativePath="rc\cursor26.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor28.cur">
+			RelativePath="rc\cursor28.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor2a.cur">
+			RelativePath="rc\cursor2a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor2c.cur">
+			RelativePath="rc\cursor2c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor2e.cur">
+			RelativePath="rc\cursor2e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor30.cur">
+			RelativePath="rc\cursor30.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor32.cur">
+			RelativePath="rc\cursor32.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor34.cur">
+			RelativePath="rc\cursor34.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor36.cur">
+			RelativePath="rc\cursor36.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor38.cur">
+			RelativePath="rc\cursor38.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor3a.cur">
+			RelativePath="rc\cursor3a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor3c.cur">
+			RelativePath="rc\cursor3c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor3e.cur">
+			RelativePath="rc\cursor3e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor40.cur">
+			RelativePath="rc\cursor40.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor42.cur">
+			RelativePath="rc\cursor42.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor44.cur">
+			RelativePath="rc\cursor44.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor46.cur">
+			RelativePath="rc\cursor46.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor48.cur">
+			RelativePath="rc\cursor48.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor4a.cur">
+			RelativePath="rc\cursor4a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor4c.cur">
+			RelativePath="rc\cursor4c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor4e.cur">
+			RelativePath="rc\cursor4e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor50.cur">
+			RelativePath="rc\cursor50.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor52.cur">
+			RelativePath="rc\cursor52.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor54.cur">
+			RelativePath="rc\cursor54.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor56.cur">
+			RelativePath="rc\cursor56.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor58.cur">
+			RelativePath="rc\cursor58.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor5a.cur">
+			RelativePath="rc\cursor5a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor5c.cur">
+			RelativePath="rc\cursor5c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor60.cur">
+			RelativePath="rc\cursor60.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor62.cur">
+			RelativePath="rc\cursor62.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor64.cur">
+			RelativePath="rc\cursor64.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor66.cur">
+			RelativePath="rc\cursor66.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor68.cur">
+			RelativePath="rc\cursor68.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor6a.cur">
+			RelativePath="rc\cursor6a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor6c.cur">
+			RelativePath="rc\cursor6c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor6e.cur">
+			RelativePath="rc\cursor6e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor70.cur">
+			RelativePath="rc\cursor70.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor72.cur">
+			RelativePath="rc\cursor72.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor74.cur">
+			RelativePath="rc\cursor74.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor76.cur">
+			RelativePath="rc\cursor76.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor78.cur">
+			RelativePath="rc\cursor78.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor7a.cur">
+			RelativePath="rc\cursor7a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor7c.cur">
+			RelativePath="rc\cursor7c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor7e.cur">
+			RelativePath="rc\cursor7e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor80.cur">
+			RelativePath="rc\cursor80.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor82.cur">
+			RelativePath="rc\cursor82.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor84.cur">
+			RelativePath="rc\cursor84.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor86.cur">
+			RelativePath="rc\cursor86.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor88.cur">
+			RelativePath="rc\cursor88.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor8a.cur">
+			RelativePath="rc\cursor8a.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor8c.cur">
+			RelativePath="rc\cursor8c.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor8e.cur">
+			RelativePath="rc\cursor8e.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor90.cur">
+			RelativePath="rc\cursor90.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor92.cur">
+			RelativePath="rc\cursor92.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor94.cur">
+			RelativePath="rc\cursor94.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor96.cur">
+			RelativePath="rc\cursor96.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\cursor98.cur">
+			RelativePath="rc\cursor98.cur"
+			>
 		</File>
 		<File
-			RelativePath="rc\tk.ico">
+			RelativePath="rc\tk.ico"
+			>
 		</File>
 	</Files>
 	<Globals>
